@@ -27,4 +27,5 @@ Only the `owner` can call this method. like it denotes, it is used to update the
 
 
 ## Kin NFT 
-For every participant, An NFT is minted and transefered to their wallets to denote their participation and their position on the queue. Their position is denoted by ` index on the list + 1 ` and their NFT token ID. This position also denotes how much of the `threshold` would pass without any activity from any participant, before they can get access.
+For every participant, An NFT is minted and transefered to their wallets to denote their participation and their position on the queue. Their position is denoted by ` index on the list + 1 ` and their NFT token ID. This position also denotes how much of the `threshold` would pass without any activity from any participant, before they can get access. This is what is called the `span` and it is the product of their position and the threshold.
+The NFT is mostly important to help the frontend know the various Kins a user is affiliated with and the user's respective positions
