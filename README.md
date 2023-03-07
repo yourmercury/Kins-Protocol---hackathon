@@ -7,7 +7,7 @@ The application takes a list of addresses (max of 3) and puts them in a queue in
 
 
 ``` (add-kin-wallets (wallets (list 3 principal)) ```
-This method takes in a max of 3 wallet addresses and stores them on the contract. These are wallets that would be able to access deposited funds in the wallet after the owner has not been active for an amount of time in block height referred to as the `threshold`. It can only be used by the `owner` of the contract
+This method sets and update the next of kin queue or list in order. These are wallets that would be able to access deposited funds in the wallet after the owner has not been active for an amount of time in block height referred to as the `threshold`. It can only be used by the `owner` of the contract
 
 ``` (deposit (amount uint)) ```
 ``` (withdraw (amount uint)) ```
@@ -25,3 +25,6 @@ This method is used to register presence or activity by either of the participan
 ``` (update-threshold (height uint)) ``` 
 Only the `owner` can call this method. like it denotes, it is used to update the `threshold` which is the amount of time from the last active moment `last-pinged-height` to the present blochain. if that `span` of time is equal or greater the `threshold`, the next person on the queue would have access to the deposited fund
 
+
+## Kin NFT 
+For every participant, An NFT is minted and transefered to their wallets to denote their participation and their position on the queue. Their position is denoted by ` index on the list + 1 ` and their NFT token ID. This position also denotes how much of the `threshold` would pass without any activity from any participant, before they can get access.
