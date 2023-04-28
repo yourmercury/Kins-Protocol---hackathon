@@ -1,4 +1,4 @@
-# Kin's Protocol
+# Kin's Protocol (Now Heircules Protocol)
 
 The application is a next of kin implementation for the Stacks token. 
 The application takes a list of addresses (max of 3) and puts them in a queue in the order that they came in. These addresses would be able to access the funds in the contract deposited by the deployer if the deployer does not notify the contract of his or her activeness within a particular threshold set by the deployer.
